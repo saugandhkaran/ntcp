@@ -1,7 +1,7 @@
 <template>
   <div class="penalty-form">
     <div class="section">
-      <form @submit="issueChallan()">
+      <!-- <form @submit="issueChallan()"> -->
         <div class="flex-container column center">
           <div class="form-control">
             <div v-if="!penaltyFormObject.photo" class="photo"><h3>Upload a picture</h3></div>
@@ -26,9 +26,9 @@
             <p>Remarks</p>
             <textarea v-model="penaltyFormObject.remarks" type="text"></textarea>
           </div>
-          <button type="submit" class="btn-primary">Issue challan</button>
+          <button type="submit" @click="issueChallan()" class="btn-primary">Issue challan</button>
         </div>
-      </form>
+      <!-- </form> -->
     </div>
   </div>
 </template>
